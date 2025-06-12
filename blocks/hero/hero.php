@@ -17,8 +17,8 @@ $title = get_field('title');
             <?php echo wp_get_attachment_image($bg, 'full', false, array('class' => 'go-parallex')); ?>
         </div>
         <div class="kids">
-            <img class="go-parallex-kids" src="<?php echo get_template_directory_uri(); ?>/src/img/dzieci3.png"
-                alt="<?php the_title(); ?> ">
+            <!-- <img class="go-parallex-kids" src="<?php echo get_template_directory_uri(); ?>/src/img/dzieci3.png"
+                alt="<?php the_title(); ?> "> -->
         </div>
         <div class="b-hero__content">
             <h1>
