@@ -1,5 +1,7 @@
 <?php
 $display_socialmedia = get_theme_mod('footer_display_socialmedia', false);
+$custom_logo_id = get_theme_mod('custom_logo');
+$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 ?>
 
 <div class="f-site container">
@@ -9,13 +11,15 @@ $display_socialmedia = get_theme_mod('footer_display_socialmedia', false);
             <div class="f-brand-info">
                 <div class="f-b-info">
                     <a class="f-brand" href="<?php echo esc_url(home_url('/')); ?>">
+                        <?php if (has_custom_logo()) {
+                            echo '<img src="' . esc_url($logo[0]) . '" alt="' . esc_attr(get_bloginfo('name')) . '">';
+                        } else { ?>
+                            <svg width="247" height="99" viewBox="0 0 247 99" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="247" height="99" fill="white" />
+                            </svg>
 
-                        <svg width="247" height="99" viewBox="0 0 247 99" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <rect width="247" height="99" fill="white" />
-                        </svg>
-
-
+                        <?php } ?>
                     </a>
                     <a href="https://orlysportu.pl/" target="_blank">
 
