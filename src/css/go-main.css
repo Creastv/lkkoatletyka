@@ -1534,11 +1534,18 @@ body.single .entry-content a {
   padding: 10px;
 }
 
+.form-wrap label {
+  margin-bottom: 10px;
+  display: block;
+}
+
 input,
 textarea {
   margin: 0px !important;
   border: none;
   border-bottom: 1px solid var(--main);
+  margin-bottom: 10px !important;
+  padding: 10px;
   outline: none;
   width: 100%;
 }
@@ -1595,6 +1602,7 @@ textarea:focus-visible {
 
 .wpcf7-submit {
   color: white;
+  background-color: var(--main);
   padding: 10px;
   border: none;
   border-radius: 0px;

@@ -32,12 +32,18 @@
   width: 100%;
   padding: 10px;
 }
+.form-wrap label {
+  margin-bottom: 10px;
+  display: block;
+}
 input,
 textarea {
   margin: 0px !important;
   border: none;
   border-bottom: 1px solid var(--main);
   // border: none;
+  margin-bottom: 10px !important;
+  padding: 10px;
   outline: none;
   width: 100%;
   &:focus-visible {
@@ -87,6 +93,7 @@ textarea {
 
 .wpcf7-submit {
   color: white;
+  background-color: var(--main);
   padding: 10px;
   border: none;
   border-radius: 0px;
