@@ -88,9 +88,15 @@
   height: calc(100vh - 200px);
   min-height: 430px;
 }
+@media only screen and (max-width: 998px) {
+  .b-hero .b-hero__wrap {
+    height: auto;
+  }
+}
 @media only screen and (max-width: 768px) {
   .b-hero .b-hero__wrap {
     min-height: initial;
+    height: auto;
   }
 }
 .b-hero .b-hero__content {
@@ -113,11 +119,11 @@
 }
 @media only screen and (max-width: 768px) {
   .b-hero .b-hero__content {
-    top: 0;
+    position: relative;
+    padding: 20px 0 70px;
+    text-align: center;
     left: 50%;
     transform: translate(-50%, 20px);
-    text-align: center;
-    padding: 0;
   }
 }
 @media only screen and (max-width: 768px) {
