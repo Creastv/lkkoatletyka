@@ -748,7 +748,6 @@ body.archive .entry-header h1 {
   gap: 15px;
   padding: 20px 20px 20px 80px;
   transition: all 0.3s ease;
-  width: 40%;
 }
 @media only screen and (max-width: 1200px) {
   .navbar__partners {
