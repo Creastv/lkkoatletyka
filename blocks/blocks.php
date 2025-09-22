@@ -90,6 +90,23 @@ function register_acf_block_types()
     }
   ));
   acf_register_block_type(array(
+    'name'              => 'table',
+    'title'             => __('Table'),
+    'render_template'   => 'blocks/table/table.php',
+    'category'          => 'formatting',
+    'icon' => array(
+      'background' => '#122b4f',
+      'foreground' => '#fff',
+      'src' => 'ellipsis',
+    ),
+    'mode'            => 'preview',
+    'keywords'          => array('table'),
+    'supports' => array('align' => true),
+    'enqueue_assets'    => function () {
+      wp_enqueue_style('go-table',  get_template_directory_uri() . '/blocks/table/table.min.css');
+    },
+  ));
+  acf_register_block_type(array(
     'name'              => 'info-contact',
     'title'             => __('Info kontakt'),
     'render_template'   => 'blocks/info-contact/info-contact.php',
