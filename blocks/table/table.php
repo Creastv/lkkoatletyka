@@ -1,8 +1,12 @@
 <?php
-$table = get_field('tabela');
 
+$table = get_field('tabela');
+$class_name = 'wp-block-table';
+if (!empty($block['className'])) {
+    $class_name .= ' ' . $block['className'];
+}
 if (! empty($table)) {
-    echo '<figure class="wp-block-table">';
+    echo '<figure class="' .  $class_name . '">';
     echo '<table>';
 
     if (! empty($table['caption'])) {
